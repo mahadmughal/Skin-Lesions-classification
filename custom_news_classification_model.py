@@ -12,7 +12,6 @@ class CustomNewsClassificationModel(nn.Module):
     self.act1 = nn.__getattribute__(act1)()
 
     self.fc2 = nn.Linear(hidden_dim, num_class)
-        #self.act2 = nn.__getattribute__(act2)()
         
     self.logs = nn.LogSoftmax(dim=-1)
     

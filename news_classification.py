@@ -10,6 +10,7 @@ from news_classification_dataset import NewsClassificationDataset
 import pdb
 import collections
 import matplotlib.pyplot as plt
+import numpy as np
 from torchtext.data.utils import get_tokenizer
 from torchtext.vocab import build_vocab_from_iterator
 from torch import long, as_tensor, cat
@@ -21,6 +22,10 @@ from random import random
 from torch.optim import Adam
 from custom_news_classification_model import CustomNewsClassificationModel
 import train_news_classifier
+from simpletransformers.classification import ClassificationModel
+from sklearn.metrics import classification_report
+from transformers import AutoModel, AutoTokenizer
+
 
 TRAIN_DATASET = 'dataset/txt/train.csv'
 VALIDATION_DATASET = 'dataset/txt/val.csv'
@@ -34,6 +39,7 @@ NUMBER_OF_EPOCHS = 80
 
 text_transf = lambda x: vocab(tokenizer(x))
 label_transf = lambda x: int(x)
+
 
 def data_loading():
   train_df = pd.read_csv(TRAIN_DATASET)
@@ -124,6 +130,44 @@ def train_custom_model(train_dataloader, test_dataloader, vocab):
     ident_str= "fill me in here")
 
 
+def train_pretrained_bert(train_df, val_df):
+  df = pd.DataFrame()
+  df['text'] = [description for _, _, description in train_df.values]
+  df['label'] = [label-1 for label, _, _ in train_df.values]
+
+  validation_df = pd.DataFrame()
+  validation_df['text'] = [description for _, _, description in val_df.values]
+  validation_df['label'] = [label-1 for label, _, _ in val_df.values] 
+
+  model = ClassificationModel(
+    'bert', 
+    'bert-base-cased', 
+    num_labels=4,
+    args={'reprocess_input_data': True, 'overwrite_output_dir': True},
+    use_cuda=False
+  )
+
+  model.train_model(df) 
+
+  result, model_outputs, wrong_predictions = model.eval_model(validation_df)
+
+  print(result)
+  print(model_outputs)
+
+  lst = []
+  for arr in model_outputs:
+    lst.append(np.argmax(arr))
+
+  true = validation_df['label'].tolist()
+  predicted = lst
+
+  print(classification_report(
+    true,
+    predicted,
+    target_names=['World','Sports','Business','Sci/Tech']
+    )
+  )
+
 
 train_df, val_df = data_loading()
 train, val, train_ds, val_ds = prepare_data_file(train_df, val_df)
@@ -133,6 +177,7 @@ vocab = prepare_vocab(train)
 train_dataloader = prepare_data_loaders(train_ds)
 test_dataloader = prepare_data_loaders(val_ds)
 train_custom_model(train_dataloader, test_dataloader, vocab)
+# train_pretrained_bert(train_df, val_df)
 
 
 

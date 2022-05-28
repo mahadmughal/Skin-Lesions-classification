@@ -21,3 +21,4 @@ config: {}
 2022-05-28 21:14:20,502 INFO    MainThread:209196 [wandb_run.py:_redirect():1376] Redirecting console.
 2022-05-28 21:14:20,503 INFO    MainThread:209196 [wandb_run.py:_redirect():1438] Redirects installed.
 2022-05-28 21:14:20,503 INFO    MainThread:209196 [wandb_init.py:init():546] run started, returning control to user process
+2022-05-28 22:13:53,227 INFO    MainThread:209196 [wandb_run.py:finish():1167] finishing run mahad0900/CSE5DL Assignment Task 1/l6yqafgs
