@@ -1,0 +1,22 @@
+{
+    "os": "Linux-5.13.0-44-generic-x86_64-with-glibc2.29",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-05-28T15:52:12.303969",
+    "startedAt": "2022-05-28T15:52:07.037796",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "skin_lesions_classification.py",
+    "codePath": "skin_lesions_classification.py",
+    "git": {
+        "remote": "git@github.com:mahadmughal/Skin-Lesions-classification.git",
+        "commit": "57191f7a2356ad0f3ebcd47dddf8eb9fcdf94e80"
+    },
+    "email": "mahad.asif@amrood.de",
+    "root": "/home/mahad/Desktop/my_work/Skin-Lesions-classification",
+    "host": "mahad-Inspiron-5759",
+    "username": "mahad",
+    "executable": "/usr/bin/python3"
+}

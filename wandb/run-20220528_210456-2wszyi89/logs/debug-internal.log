@@ -1,0 +1,41 @@
+2022-05-28 21:04:57,744 INFO    MainThread:204891 [internal.py:wandb_internal():88] W&B internal server running at pid: 204891, started at: 2022-05-28 21:04:57.744215
+2022-05-28 21:04:57,746 DEBUG   HandlerThread:204891 [handler.py:handle_request():120] handle_request: check_version
+2022-05-28 21:04:57,747 INFO    WriterThread:204891 [datastore.py:open_for_write():77] open: /home/mahad/Desktop/my_work/Skin-Lesions-classification/wandb/run-20220528_210456-2wszyi89/run-2wszyi89.wandb
+2022-05-28 21:04:57,747 DEBUG   SenderThread:204891 [sender.py:send():160] send: header
+2022-05-28 21:04:57,747 DEBUG   SenderThread:204891 [sender.py:send():160] send: request
+2022-05-28 21:04:57,748 DEBUG   SenderThread:204891 [sender.py:send_request():169] send_request: check_version
+2022-05-28 21:04:58,550 DEBUG   SenderThread:204891 [sender.py:send():160] send: run
+2022-05-28 21:05:00,931 INFO    SenderThread:204891 [sender.py:_start_run_threads():651] run started: 2wszyi89 with start time 1653753896
+2022-05-28 21:05:00,931 DEBUG   SenderThread:204891 [sender.py:send():160] send: summary
+2022-05-28 21:05:00,932 INFO    SenderThread:204891 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2022-05-28 21:05:00,932 DEBUG   HandlerThread:204891 [handler.py:handle_request():120] handle_request: run_start
+2022-05-28 21:05:02,388 DEBUG   HandlerThread:204891 [meta.py:__init__():34] meta init
+2022-05-28 21:05:02,389 DEBUG   HandlerThread:204891 [meta.py:__init__():48] meta init done
+2022-05-28 21:05:02,389 DEBUG   HandlerThread:204891 [meta.py:probe():190] probe
+2022-05-28 21:05:02,390 DEBUG   HandlerThread:204891 [meta.py:_setup_git():180] setup git
+2022-05-28 21:05:02,413 DEBUG   HandlerThread:204891 [meta.py:_setup_git():187] setup git done
+2022-05-28 21:05:02,414 DEBUG   HandlerThread:204891 [meta.py:_save_pip():52] save pip
+2022-05-28 21:05:02,415 DEBUG   HandlerThread:204891 [meta.py:_save_pip():66] save pip done
+2022-05-28 21:05:02,415 DEBUG   HandlerThread:204891 [meta.py:probe():231] probe done
+2022-05-28 21:05:02,417 DEBUG   SenderThread:204891 [sender.py:send():160] send: files
+2022-05-28 21:05:02,417 INFO    SenderThread:204891 [sender.py:_save_file():781] saving file wandb-metadata.json with policy now
+2022-05-28 21:05:02,423 DEBUG   HandlerThread:204891 [handler.py:handle_request():120] handle_request: status
+2022-05-28 21:05:02,424 DEBUG   SenderThread:204891 [sender.py:send():160] send: request
+2022-05-28 21:05:02,424 DEBUG   SenderThread:204891 [sender.py:send_request():169] send_request: status
+2022-05-28 21:05:18,739 DEBUG   HandlerThread:204891 [handler.py:handle_request():120] handle_request: status
+2022-05-28 21:05:18,740 DEBUG   SenderThread:204891 [sender.py:send():160] send: request
+2022-05-28 21:05:18,740 DEBUG   SenderThread:204891 [sender.py:send_request():169] send_request: status
+2022-05-28 21:05:30,456 DEBUG   SenderThread:204891 [sender.py:send():160] send: stats
+2022-05-28 21:05:35,115 DEBUG   HandlerThread:204891 [handler.py:handle_request():120] handle_request: status
+2022-05-28 21:05:35,116 DEBUG   SenderThread:204891 [sender.py:send():160] send: request
+2022-05-28 21:05:35,116 DEBUG   SenderThread:204891 [sender.py:send_request():169] send_request: status
+2022-05-28 21:05:50,897 DEBUG   HandlerThread:204891 [handler.py:handle_request():120] handle_request: status
+2022-05-28 21:05:50,898 DEBUG   SenderThread:204891 [sender.py:send():160] send: request
+2022-05-28 21:05:50,898 DEBUG   SenderThread:204891 [sender.py:send_request():169] send_request: status
+2022-05-28 21:05:53,776 WARNING MainThread:204891 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2022-05-28 21:05:55,035 WARNING MainThread:204891 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2022-05-28 21:05:55,035 ERROR   MainThread:204891 [internal.py:wandb_internal():149] Internal process interrupted.
+2022-05-28 21:05:55,483 INFO    SenderThread:204891 [sender.py:finish():884] shutting down sender
+2022-05-28 21:05:55,483 INFO    WriterThread:204891 [datastore.py:close():258] close: /home/mahad/Desktop/my_work/Skin-Lesions-classification/wandb/run-20220528_210456-2wszyi89/run-2wszyi89.wandb
+2022-05-28 21:05:55,485 INFO    HandlerThread:204891 [handler.py:finish():624] shutting down handler
+2022-05-28 21:05:59,667 INFO    MainThread:204891 [internal.py:handle_exit():78] Internal process exited
